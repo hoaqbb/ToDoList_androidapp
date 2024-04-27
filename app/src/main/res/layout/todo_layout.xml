@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/nero">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/night_rider"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="8dp"
+        android:id="@+id/view">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/night_rider"
+            android:buttonTint="@color/white"
+            android:padding="5dp"
+            android:text="To do title"
+            android:textSize="30dp"
+            android:textColor="@color/white" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/night_rider"
+            android:drawableEnd="@drawable/baseline_edit_24"
+            tools:ignore="SpeakableTextPresentCheck"
+            />
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/night_rider"
+            android:drawableEnd="@drawable/baseline_delete_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    android:layout_marginStart="350dp"-->
+</LinearLayout>
