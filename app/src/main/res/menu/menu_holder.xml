@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/mnuEdit"
         android:title="Edit task"/>
 
     <item
         android:id="@+id/mnuComplete"
-        android:title="Mask is completed"/>
+        android:title="Mark is completed"/>
 
     <item
         android:id="@+id/mnuDelete"
         android:title="Delete task"/>
-<!--    android:icon="@mipmap/service"-->
 </menu>

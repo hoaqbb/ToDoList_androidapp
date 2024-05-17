@@ -86,6 +86,24 @@ class DbHelper (context: Context, factory: SQLiteDatabase.CursorFactory?):
             return rs
         }
 
+        @SuppressLint("Range")
+        fun getTaskById(taskId: Int): Task? {
+            val db = this.readableDatabase
+            var task: Task? = null
+            val query = "SELECT * FROM $TABLE_NAME WHERE $id_col = ?"
+            val cursor: Cursor = db.rawQuery(query, arrayOf(taskId.toString()))
+
+            if (cursor.moveToFirst()) {
+                val id = cursor.getInt(cursor.getColumnIndex(id_col))
+                val title = cursor.getString(cursor.getColumnIndex(title_col))
+                val status = cursor.getInt(cursor.getColumnIndex(status_col))
+                task = Task(id, title, status)
+            }
+            cursor.close()
+            db.close()
+            return task
+        }
+
         fun editTask(taskId: Int, newtitle: String): Int{
             val db = this.writableDatabase
             val values = ContentValues().apply {

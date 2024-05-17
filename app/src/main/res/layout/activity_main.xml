@@ -37,6 +37,7 @@
             app:borderWidth="0dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_margin="40dp"/>
+            android:layout_margin="40dp"
+            tools:ignore="MissingClass" />
 
 </RelativeLayout>
